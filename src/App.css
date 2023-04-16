@@ -1,0 +1,34 @@
+body{
+  background-color: rgb(40,40,40);
+  margin: 0px;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+#menu{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.menu-item{
+  color: white;
+  font-size: clamp(3rem, 8vw,8rem);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+
+}
+
+#about{
+  height: 100vh;
+}
+
+#projects {
+  height: 100vh;
+}
+
+#contact {
+  height: 100vh;
+}
