@@ -4,13 +4,63 @@ body{
 }
 
 
+/* MENU */
+.menu{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  
+}
+
 html{
   scroll-behavior: smooth;
 }
-#menu{
+
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: min-content;
+  transform: scaleX(-1);
+}
+
+/* Contents Bar */
+.contents-bar{
+  /* width: 20vw; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bar{
+  width: 1em;
+  height: 80vh;
+  background-color: #4b27a1;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  position: absolute;
+}
+
+.bar-peg{
+  width: 10em;
+  height: 0.75em;
+  background-color: #4b27a1;
+  margin-bottom : clamp(3rem, 8vw,8rem);
+  transition: width 0.5s;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Table of Contents */
+#menu-items{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  width: 60vw;
 }
 
 .menu-item{
@@ -18,8 +68,66 @@ html{
   font-size: clamp(3rem, 8vw,8rem);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-decoration: none;
-
+  display: block;
+  transform: scaleX(-1);
+  position: absolute;
+  top: 0px;
+  right: 2em;
+  /* padding-top: 1em; */
+  /* padding-left: 1em; */
+  /* padding-left: 1em; */
 }
+
+#menu-items:hover > .row > .menu-item{
+  opacity: 0.3;
+}
+
+#menu-items:hover>.row>.bar-peg {
+  width: 6em;
+}
+
+#menu-items:hover > .row> .menu-item:hover + .bar-peg{
+  width: 10em;
+}
+
+#menu-items:hover>.row>.menu-item:hover {
+  opacity: 1;
+}
+
+
+
+
+/* My Photo */
+
+.pictures-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+}
+
+.profile-background{
+  height: clamp(10rem, 26vw, 30rem);
+  width: clamp(10rem, 26vw, 30rem);
+  background-color: #4b27a1;
+  border-radius: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.image-cropper {
+  height: clamp(10rem, 26vw, 30rem);
+  width: clamp(10rem, 26vw, 30rem);
+  overflow: hidden;
+  border-radius: 100%;
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+}
+
+
+/* ABOUT */
 
 #about{
   height: 100vh;
@@ -32,3 +140,4 @@ html{
 #contact {
   height: 100vh;
 }
+
