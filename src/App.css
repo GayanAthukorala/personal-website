@@ -3,15 +3,22 @@ body{
   margin: 0px;
 }
 
+.swapY{
+  transform: scaleY(-1);
+  position: relative;
+  z-index: 2;
+}
 
 /* MENU */
+.nav{
+  height: 10vh;
+}
 .menu{
-  height: 100vh;
+  height: 65vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
-
-  
+  align-items: center;
 }
 
 html{
@@ -24,11 +31,12 @@ html{
   align-items: center;
   width: min-content;
   transform: scaleX(-1);
+  height : clamp(3rem, 8vw,8rem);
 }
 
 /* Contents Bar */
 .contents-bar{
-  /* width: 20vw; */
+  width: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,20 +45,51 @@ html{
 #bar{
   width: 1em;
   height: 80vh;
-  background-color: #4b27a1;
+  background-color: #3a2963;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar-wrapper{
+  display: flex;
+  min-width: 18em;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .bar-peg{
-  width: 10em;
+  width: 12em;
   height: 0.75em;
   background-color: #4b27a1;
-  margin-bottom : clamp(3rem, 8vw,8rem);
+  transition: width 0.4s;
+  align-items: center;
+  justify-content: center;
+  /* margin-right: 3em; */
+}
+
+.bar-projects {
+  width: 12em;
+  height: 0.75em;
+  background-color: #4b27a1;
+  transition: width 0.3s;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: clamp(9rem, 22vw, 24rem);
+}
+
+.bar-contact {
+  width: 12em;
+  height: 0.75em;
+  background-color: #4b27a1;
   transition: width 0.5s;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  bottom: clamp(6rem, 14vw, 16rem);
 }
 
 
@@ -60,42 +99,387 @@ html{
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
-  width: 60vw;
+  height: fit-content;
+  width: 70vw;
 }
 
 .menu-item{
-  color: white;
+
+  color: rgb(240,240,240);
   font-size: clamp(3rem, 8vw,8rem);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-decoration: none;
   display: block;
   transform: scaleX(-1);
+  position: relative;
+  transition: font-size 0.4s, colour 0.4s;
+  z-index: 2;
+}
+
+.menu-item-2 {
+
+  color: rgb(240, 240, 240);
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+  display: block;
+  transform: scaleX(-1);
+  position: relative;
+  transition: font-size 0.4s, colour 0.4s;
+
+}
+
+/* Logos */
+.mcmaster-logo{
+  height: 2.5em;
+  width: 2.5em;
   position: absolute;
-  top: 0px;
-  right: 2em;
-  /* padding-top: 1em; */
-  /* padding-left: 1em; */
-  /* padding-left: 1em; */
+  top: 2em;
+  left: 1em;
+  scale: 0;
+  /* transform: rotate(0deg); */
+  transform: scaleX(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
 }
 
-#menu-items:hover > .row > .menu-item{
-  opacity: 0.3;
+.techm-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  /* bottom: 100%; */
+  left: 45%;
+  top: 2em;
+  scale: 0;
+  /* transform: rotate(0deg); */
+  transform: scaleX(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
 }
 
-#menu-items:hover>.row>.bar-peg {
+.soti-logo{
+  height: 2.5em;
+    width: 2.5em;
+    position: absolute;
+    /* bottom: 100%; */
+    left: 33.75%;
+    top: 2em;
+    scale: 0;
+    transform: scaleX(-1) rotate(45deg);
+    transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+    border-radius: 0.2em;
+}
+
+.rocketry-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  /* bottom: 100%; */
+  left: 11.25%;
+  top: 2em;
+  scale: 0;
+  transform: scaleX(-1) rotate(-45deg);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
+}
+
+.js-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  left: 0%;
+  top: 2em;
+  scale: 0;
+  transform: scaleX(-1) scaleY(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
+}
+
+.python-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  /* bottom: 100%; */
+  left: 18.6%;
+  top: 2em;
+  scale: 0;
+  transform: scaleX(-1) rotate(-45deg) scaleY(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
+}
+
+.react-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  /* bottom: 100%; */
+  left: 37.3%;
+  top: 2em;
+  scale: 0;
+  transform: scaleX(-1) rotate(45deg) scaleY(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
+}
+
+.html-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  /* bottom: 100%; */
+  left: 56%;
+  top: 2em;
+  scale: 0;
+  transform: rotate(0deg) scaleX(-1) scaleY(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
+}
+
+.node-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  left: 0%;
+  top: 2em;
+  scale: 0;
+  transform: scaleX(-1) scaleY(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
+}
+
+.sql-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  /* bottom: 100%; */
+  left: 18.6%;
+  top: 2em;
+  scale: 0;
+  transform: scaleX(-1) rotate(-45deg) scaleY(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
+}
+
+.java-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  /* bottom: 100%; */
+  left: 37.3%;
+  top: 2em;
+  scale: 0;
+  transform: scaleX(-1) rotate(45deg) scaleY(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
+}
+
+.css-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  /* bottom: 100%; */
+  left: 56%;
+  top: 2em;
+  scale: 0;
+  transform: rotate(0deg) scaleX(-1) scaleY(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
+}
+
+.linkedin-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  left: 0%;
+  top: 2em;
+  scale: 0;
+  transform: scaleX(-1) scaleY(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
+}
+
+.coffee-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  /* bottom: 100%; */
+  left: 17.7%;
+  top: 2em;
+  scale: 0;
+  transform: scaleX(-1) rotate(-45deg) scaleY(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
+}
+
+.teams-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  /* bottom: 100%; */
+  left: 35.4%;
+  top: 2em;
+  scale: 0;
+  transform: scaleX(-1) rotate(45deg) scaleY(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
+}
+
+.gmail-logo {
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  /* bottom: 100%; */
+  left: 53%;
+  top: 2em;
+  scale: 0;
+  transform: rotate(0deg) scaleX(-1) scaleY(-1);
+  transition: scale 0.4s, transform 0.4s, top 0.4s, left 0.4s;
+  border-radius: 0.2em;
+}
+
+/* Menu Effects  */
+#menu-items:hover >.row > .menu-item{
+  color: rgb(70,70,70);
+}
+
+#menu-items:hover>.row> .bar-wrapper >.bar-peg {
   width: 6em;
 }
 
-#menu-items:hover > .row> .menu-item:hover + .bar-peg{
-  width: 10em;
+#menu-items:hover > .row> .menu-item:hover ~ .bar-wrapper >.bar-peg{
+  width: 12em;
 }
 
 #menu-items:hover>.row>.menu-item:hover {
-  opacity: 1;
+  color: rgb(240, 240, 240);  
+  font-size: clamp(3rem, 8.2vw, 8rem);
 }
 
+/* For contact and projects */
+#menu-items:hover>.swapY>.row> .swapY>.menu-item-2 {
+  color: rgb(70, 70, 70);
+}
 
+#menu-items:hover>.swapY>.row>.bar-wrapper>.bar-peg {
+  width: 6em;
+}
 
+#menu-items:hover>.swapY>.row>.swapY:hover~.bar-wrapper>.bar-peg {
+  width: 12em;
+}
+
+#menu-items:hover>.swapY>.row>.swapY>.menu-item-2:hover {
+  color: rgb(240, 240, 240);
+  font-size: clamp(3rem, 8.2vw, 8rem);
+}
+
+/* Logo Transitions on Menu */
+
+/* About */
+#menu-items:hover>.row>.menu-item:hover+.mcmaster-logo {
+  scale: 1;
+  transform: rotate(-45deg) scaleX(-1);
+  top: -1em;
+  left: -3em;
+}
+
+#menu-items:hover>.row>.menu-item:hover ~  .techm-logo {
+  scale: 1;
+  transform: rotate(45deg) scaleX(-1);
+  top: -1em;
+  left: 19.5em;
+}
+
+#menu-items:hover>.row>.menu-item:hover ~ .soti-logo {
+  scale: 1;
+  transform: rotate(0deg) scaleX(-1);
+  top: -2.5em;
+}
+
+#menu-items:hover>.row>.menu-item:hover~.rocketry-logo {
+  scale: 1;
+  transform: rotate(0deg) scaleX(-1);
+  top: -2.5em;
+}
+
+/* Projects */
+#menu-items:hover>.swapY>.row>.swapY:hover~.node-logo {
+  scale: 1;
+  transform: rotate(-45deg) scaleX(-1) scaleY(-1);
+  top: -1em;
+  left: -2.5em;
+}
+
+#menu-items:hover>.swapY>.row>.swapY:hover~.sql-logo {
+  scale: 1;
+  transform: rotate(0) scaleX(-1) scaleY(-1);
+  top: -2.5em;
+}
+
+#menu-items:hover>.swapY>.row>.swapY:hover~.java-logo {
+  scale: 1;
+  transform: rotate(0) scaleX(-1) scaleY(-1);
+  top: -2.5em;
+}
+
+#menu-items:hover>.swapY>.row>.swapY:hover~.css-logo {
+  scale: 1;
+  transform: rotate(-135deg) scaleX(-1) scaleY(-1);
+  top: -1em;
+  left: 63%;
+}
+
+#menu-items:hover>.swapY>.row>.swapY:hover~.js-logo {
+  scale: 1;
+  transform: rotate(45deg) scaleX(-1) scaleY(-1);
+  top: 5em;
+  left: -2.5em;
+}
+
+#menu-items:hover>.swapY>.row>.swapY:hover~.python-logo {
+  scale: 1;
+  transform: rotate(0) scaleX(-1) scaleY(-1);
+  top: 7em;
+}
+
+#menu-items:hover>.swapY>.row>.swapY:hover~.react-logo {
+  scale: 1;
+  transform: rotate(0) scaleX(-1) scaleY(-1);
+  top: 7em;
+
+}
+
+#menu-items:hover>.swapY>.row>.swapY:hover~.html-logo {
+  scale: 1;
+  transform: rotate(-45deg) scaleX(-1) scaleY(-1);
+  top: 5em;
+  left: 63%;
+}
+
+#menu-items:hover>.swapY>.row>.swapY:hover~.linkedin-logo {
+  scale: 1;
+  transform: rotate(-45deg) scaleX(-1) scaleY(-1);
+  top: -1em;
+  left: -2.5em;
+}
+
+#menu-items:hover>.swapY>.row>.swapY:hover~.coffee-logo {
+  scale: 1;
+  transform: rotate(0) scaleX(-1) scaleY(-1);
+  top: -2.5em;
+}
+
+#menu-items:hover>.swapY>.row>.swapY:hover~.teams-logo {
+  scale: 1;
+  transform: rotate(0) scaleX(-1) scaleY(-1);
+    top: -2.5em;
+}
+
+#menu-items:hover>.swapY>.row>.swapY:hover~.gmail-logo {
+  scale: 1;
+  transform: rotate(45deg) scaleX(-1) scaleY(-1);
+    top: -1em;
+  left: 58%;
+}
 
 /* My Photo */
 
@@ -104,13 +488,14 @@ html{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 40vw;
+  width: 30vw;
 }
 
 .profile-background{
   height: clamp(10rem, 26vw, 30rem);
   width: clamp(10rem, 26vw, 30rem);
-  background-color: #4b27a1;
+  background-color: rgb(30,30,30);
+  /* background-color: #3a2963; */
   border-radius: 100%;
   display: inline-block;
   position: relative;
@@ -124,6 +509,40 @@ html{
   position: absolute;
   right: 1em;
   bottom: 1em;
+}
+
+.resume-button-wrapper{
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-button{
+  height: clamp(3rem, 10vh, 6rem);
+  width: clamp(10rem, 30vw, 20rem);
+  text-decoration: none;
+  color: rgb(240, 240, 240);
+  background-color: #9D00FF;
+  border: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2em;
+  border-radius: 0.3em;
+  margin-right: 1em;
+}
+
+.menu-button {
+  margin-left: 1em;
+  margin-right: 1em;
+  height: clamp(3rem, 10vh, 6rem);
+  width: clamp(10rem, 30vw, 20rem);
+  text-decoration: none;
+  color: rgb(240, 240, 240);
+  border: solid #9D00FF;
+  background-color: transparent;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2em;
+  border-radius: 0.3em;
 }
 
 
