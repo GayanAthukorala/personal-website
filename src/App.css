@@ -607,7 +607,9 @@ html{
   width: clamp(10rem, 30vw, 20rem);
   text-decoration: none;
   color: rgb(220, 220, 220);
-  border: solid #916FFF;
+  /* border: solid #916FFF;
+   */
+  border:none;
   background-color: #7848c4;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.5em;
@@ -646,7 +648,7 @@ html{
 /* ABOUT */
 
 #about{
-  height: 100vh;
+  /* height: 100vh; */
 
 }
 
@@ -688,7 +690,6 @@ html{
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  height: 90vh;
 }
 
 .about-paragraph{
@@ -743,20 +744,33 @@ html{
 }
 
 .about-experience-wrapper{
+  margin-top: 2rem;
+  width: 80vw;
   display: grid;
-    grid-template-columns: auto auto;
-   
+  grid-template-columns: repeat(auto-fill, minmax(35vw, 1fr));
+  /* Responsive grid with minimum column width of 300px */
+  grid-gap: 1rem;
+  /* Gap between grid items */
+  justify-content: center;
+  /* Center the grid items horizontally */
+  align-items: stretch;
+  /* Stretch grid items to match the height */
   
 }
 
+.about-experience-grid-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .about-experience{
-  margin: 1rem;
   display: flex;
     flex-direction: row;
     white-space: nowrap;
     overflow: hidden;
     height: clamp(5rem, 20vh, 9rem);
-    width: 40vw;
+    width: 35vw;
     border-radius: 0.5em;
     background-color: rgb(20, 20, 20);
     color: rgb(240, 240, 240);
@@ -770,7 +784,7 @@ html{
 .about-experience-image-frame{
   height: clamp(5rem, 20vh, 9rem);
   width: 10vw;
-  background-color:rgb(220, 220, 220);
+  background-color:rgb(200,200,200);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -779,7 +793,7 @@ html{
 .about-experience-image{
   height: clamp(4rem, 18vh, 8rem);
   border-radius: 0.5rem;
-  border: black;
+
 }
 
 
@@ -806,22 +820,119 @@ html{
 
 
 #projects {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
+  flex-direction: column;
+
+
+}
+
+.projects-info{
+  /* height: 90vh; */
+  display: flex;
+  align-items: center;
   justify-content: center;
+
+}
+.projects-background{
+  /* height: 70vh; */
+  padding: 1rem;
+  width: 70vw;
+  background-color: rgb(20, 20, 20);
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+  /* Responsive grid with minimum column width of 300px */
+  grid-gap: 1rem;
+  /* Gap between grid items */
+  justify-content: center;
+  /* Center the grid items horizontally */
+  align-items: stretch;
+  /* Stretch grid items to match the height */
+
+}
+
+.projects-background-grid-item{
+  display: flex;
+  /* Use flexbox layout */
+  flex-direction: column;
+  /* Arrange child elements vertically */
+  justify-content: center;
+  /* Center content horizontally within the grid item */
   align-items: center;
 }
 
-.projects-background{
-  height: 80vh;
-  width: 80vw;
-  background-color: rgb(20, 20, 20);
-  border-radius: 1rem;
-
-
+.projects-item{
+  width: 20vw;
+  height: 50vh;
+  border-radius: 0.5rem;
+  background-color:rgb(40, 40, 40);
+ 
 }
 
 #contact {
   height: 100vh;
 }
 
+.contact-blurb{
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  overflow: hidden;
+  height: clamp(3rem, 8vh, 6rem);
+  width: clamp(10rem, 40vw, 40rem);
+  border-radius: 0.5em;
+  background-color: rgb(20, 20, 20);
+  color: rgb(240, 240, 240);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
+}
+
+.contact-message{
+  margin-left: 3rem;
+  margin-top: 1rem; 
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 55vh;
+  width: 90vw;
+  border-radius: 0.5em;
+  background-color: rgb(20, 20, 20);
+  color: rgb(240, 240, 240);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
+
+}
+
+.contact-button-container{
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-button{
+  border: none;
+  margin-left: clamp(0.5rem, 1rem, 3rem);
+  margin-right: clamp(0.5rem, 1rem, 3rem);
+  height: clamp(3rem, 4vh, 6rem);
+  width: clamp(10rem, 30vw, 20rem);
+  text-decoration: none;
+  color: rgb(220, 220, 220);
+  /* border: solid #916FFF; */
+  background-color: #7848c4;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5em;
+  border-radius: 0.3em;
+  transition: background-color 0.2s;
+
+}

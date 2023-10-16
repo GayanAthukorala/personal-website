@@ -136,44 +136,50 @@ function App() {
             <button className="current"> Current </button>
           </div>
           <div className="about-experience-wrapper">
-            <div className="about-experience">
-              <div className="about-experience-image-frame">
-                <img className="about-experience-image" src={OntarioHealth} />
-              </div>
-              <div className="about-experience-title-frame">
-                <div className="about-experience-title">Ontario Health</div>
-                <div className="about-experience-role">
-                  <span className="name">[</span> Software Developer Intern{" "}
-                  <span className="name">]</span>
+            <div className="about-experience-grid-item">
+              <div className="about-experience">
+                <div className="about-experience-image-frame">
+                  <img className="about-experience-image" src={OntarioHealth} />
+                </div>
+                <div className="about-experience-title-frame">
+                  <div className="about-experience-title">Ontario Health</div>
+                  <div className="about-experience-role">
+                    <span className="name">[</span> Software Developer Intern{" "}
+                    <span className="name">]</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="about-experience">
-              <div className="about-experience-image-frame">
-                <img className="about-experience-image" src={TechM} />
-              </div>
-              <div className="about-experience-title-frame">
-                <div className="about-experience-title">Tech Mahindra</div>
-                <div className="about-experience-role">
-                  <span className="name">[</span> Jr. Software Engineer{" "}
-                  <span className="name">]</span>
+            <div className="about-experience-grid-item">
+              <div className="about-experience">
+                <div className="about-experience-image-frame">
+                  <img className="about-experience-image" src={TechM} />
+                </div>
+                <div className="about-experience-title-frame">
+                  <div className="about-experience-title">Tech Mahindra</div>
+                  <div className="about-experience-role">
+                    <span className="name">[</span> Jr. Software Engineer{" "}
+                    <span className="name">]</span>
+                  </div>
                 </div>
               </div>
             </div>
-            {/* <div className="about-experience">
-              <div className="about-experience-image-frame">
-                <img className="about-experience-image" src={Rocketry} />
-              </div>
-              <div className="about-experience-title-frame">
-                <div className="about-experience-title">
-                  McMaster Rocketry Team
+            <div className="about-experience-grid-item">
+              <div className="about-experience">
+                <div className="about-experience-image-frame">
+                  <img className="about-experience-image" src={Rocketry} />
                 </div>
-                <div className="about-experience-role">
-                  <span className="name">[</span> Payload Subteam{" "}
-                  <span className="name">]</span>
+                <div className="about-experience-title-frame">
+                  <div className="about-experience-title">
+                    McMaster Rocketry Team
+                  </div>
+                  <div className="about-experience-role">
+                    <span className="name">[</span> Payload Subteam{" "}
+                    <span className="name">]</span>
+                  </div>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
@@ -181,11 +187,37 @@ function App() {
         <div className="about-title">
           PROJECTS<span className="name">.</span>
         </div>
-        <div className="projects-background"></div>
+        <div className="projects-info">
+          <div className="projects-background">
+            <div className="projects-background-grid-item">
+              <div className="projects-item"></div>
+            </div>
+            <div className="projects-background-grid-item">
+              <div className="projects-item"></div>
+            </div>
+            <div className="projects-background-grid-item">
+              <div className="projects-item"></div>
+            </div>
+            <div className="projects-background-grid-item">
+              <div className="projects-item"></div>
+            </div>
+            <div className="projects-background-grid-item">
+              <div className="projects-item"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="contact">
         <div className="about-title">
           CONTACT<span className="name">.</span>
+        </div>
+        <div className="contact-blurb">
+          Lets connect<span className="name">,&nbsp;</span> I would love to have
+          a coffee chat<span className="name">!</span>{" "}
+        </div>
+        <div className="contact-message"></div>
+        <div className="contact-button-container">
+          <button className="contact-button">Send</button>
         </div>
       </div>
     </div>
