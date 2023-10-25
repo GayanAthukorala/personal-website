@@ -20,9 +20,50 @@ import GitHubLogo from "./images/GitHub Logo.png";
 import GitHubIcon from "./images/GitHub Icon.png";
 import LinkedInIcon from "./images/Linkedin Icon.png";
 import OntarioHealth from "./images/Ontario Health Logo.png";
+import Resume from "./Resume.pdf";
+import LocalLove from "./images/LocalLove.png";
+import ZeroFoodWaste from "./images/ZeroFoodWaste.png";
+import Verses from "./images/VersesNew.png";
+import IslandGen from "./images/sample.svg";
 import "./App.css";
+import React, { useEffect, useState, useRef, useContext } from "react";
 
 function App() {
+  const [allButtonClicked, setAllButton] = useState(true);
+  const [coopButtonClicked, setCoopButton] = useState(false);
+  const [clubButtonClicked, setClubButton] = useState(false);
+
+  const allBtn = document.getElementById("allBtn");
+  const clubBtn = document.getElementById("clubBtn");
+  const coopBtn = document.getElementById("coopBtn");
+
+  const allButtonClick = () => {
+    setAllButton(true);
+    setClubButton(false);
+    setCoopButton(false);
+    allBtn.style.width = "15rem";
+    clubBtn.style.width = "10rem";
+    coopBtn.style.width = "10rem";
+  };
+
+  const clubButtonClick = () => {
+    setAllButton(false);
+    setClubButton(true);
+    setCoopButton(false);
+    allBtn.style.width = "10rem";
+    clubBtn.style.width = "15rem";
+    coopBtn.style.width = "10rem";
+  };
+
+  const coopButtonClick = () => {
+    setAllButton(false);
+    setClubButton(false);
+    setCoopButton(true);
+    allBtn.style.width = "10rem";
+    clubBtn.style.width = "10rem";
+    coopBtn.style.width = "15rem";
+  };
+
   return (
     <div>
       <div className="nav">
@@ -104,8 +145,25 @@ function App() {
       </div>
       <span className="lower-menu">
         <div className="menu-button-wrapper">
-          <button className="menu-button">Resume</button>
-          <button className="menu-button">GitHub</button>
+          <button
+            className="menu-button"
+            onClick={() =>
+              window.open(
+                "file://C:UsersgayanpersonalWebsitepersonal-websitesrcResume.pdf",
+                "_blank"
+              )
+            }
+          >
+            Resume
+          </button>
+          <button
+            className="menu-button"
+            onClick={() =>
+              window.open("https://github.com/GayanAthukorala", "_blank")
+            }
+          >
+            GitHub
+          </button>
         </div>
         <div className="blurb-wrapper">
           <div className="blurb">
@@ -132,8 +190,18 @@ function App() {
             my friends, playing volleyball, and going skiing!{" "}
           </div>
           <div className="about-toggle">
-            <button className="previous"> Previous </button>
-            <button className="current"> Current </button>
+            <button className="club-btn" id="clubBtn" onClick={clubButtonClick}>
+              {" "}
+              Previous{" "}
+            </button>
+            <button className="all-btn" id="allBtn" onClick={allButtonClick}>
+              {" "}
+              All
+            </button>
+            <button className="coop-btn" id="coopBtn" onClick={coopButtonClick}>
+              {" "}
+              Current{" "}
+            </button>
           </div>
           <div className="about-experience-wrapper">
             <div className="about-experience-grid-item">
@@ -190,19 +258,79 @@ function App() {
         <div className="projects-info">
           <div className="projects-background">
             <div className="projects-background-grid-item">
-              <div className="projects-item"></div>
+              <div className="projects-item">
+                <div className="projects-item-picture-background">
+                  <img className="projects-item-picture" src={LocalLove} />
+                </div>
+                <div className="projects-item-title">Local Love</div>
+                <div className="projects-item-details-wrapper">
+                  <div className="projects-item-bracket">[</div>
+                  <div className="projects-item-description">
+                    {" "}
+                    Find Local Businesses in your Area
+                  </div>
+                  <div className="projects-item-bracket">]</div>
+                </div>
+              </div>
             </div>
             <div className="projects-background-grid-item">
-              <div className="projects-item"></div>
+              <div className="projects-item">
+                <div className="projects-item">
+                  <div className="projects-item-picture-background">
+                    <img
+                      className="projects-item-picture"
+                      src={ZeroFoodWaste}
+                    />
+                  </div>
+                  <div className="projects-item-title">ZeroFoodWaste</div>
+                  <div className="projects-item-details-wrapper">
+                    <div className="projects-item-bracket">[</div>
+                    <div className="projects-item-description">
+                      {" "}
+                      Learn New Recipes with Personalized Ingredient Amounts to
+                      Eliminate Food Wastage
+                    </div>
+                    <div className="projects-item-bracket">]</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="projects-background-grid-item">
-              <div className="projects-item"></div>
+              <div className="projects-item">
+                <div className="projects-item">
+                  <div className="projects-item-picture-background">
+                    <img className="projects-item-picture" src={Verses} />
+                  </div>
+                  <div className="projects-item-title">Verses</div>
+                  <div className="projects-item-details-wrapper">
+                    <div className="projects-item-bracket">[</div>
+                    <div className="projects-item-description">
+                      {" "}
+                      A music quiz app for you to test yourself and your friends
+                      on your music taste
+                    </div>
+                    <div className="projects-item-bracket">]</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="projects-background-grid-item">
-              <div className="projects-item"></div>
-            </div>
-            <div className="projects-background-grid-item">
-              <div className="projects-item"></div>
+              <div className="projects-item">
+                <div className="projects-item">
+                  <div className="projects-item-picture-background">
+                    <img className="projects-item-picture" src={IslandGen} />
+                  </div>
+                  <div className="projects-item-title">Island Generator</div>
+                  <div className="projects-item-details-wrapper">
+                    <div className="projects-item-bracket">[</div>
+                    <div className="projects-item-description">
+                      {" "}
+                      Find Local Businesses in your Area
+                    </div>
+                    <div className="projects-item-bracket">]</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

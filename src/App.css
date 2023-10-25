@@ -713,7 +713,7 @@ html{
   margin-top: 1rem;
 }
 
-.previous{
+.club-btn{
   height: 2.5rem;
   width: 10rem;
   clip-path: polygon(0 0, 92% 0, 100% 100%, 0 100%);
@@ -724,11 +724,26 @@ html{
   color: rgb(220, 220, 220);
   font-size: medium;
   font-weight: bold;
+  transition: width 0.5s;
 }
 
+.all-btn{
+  height: 2.5rem;
+    width: 15rem;
+  clip-path: polygon(0 0, 92% 0, 100% 100%, 8% 100%);
+  background-color: #7848c4;
+    border: none;
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.1rem;
+    color: rgb(220, 220, 220);
+    font-size: medium;
+    font-weight: bold;
+    transition: width 0.5s;
 
+}
 
-.current{
+.coop-btn{
   height: 2.5rem;
   width: 10rem;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
@@ -741,6 +756,7 @@ html{
   color:rgb(220, 220, 220);
   font-size: medium;
   font-weight: bold;
+  transition: width 0.5s;
 }
 
 .about-experience-wrapper{
@@ -784,7 +800,7 @@ html{
 .about-experience-image-frame{
   height: clamp(5rem, 20vh, 9rem);
   width: 10vw;
-  background-color:rgb(200,200,200);
+  background-color:rgb(240, 240, 240);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -837,8 +853,8 @@ html{
 .projects-background{
   /* height: 70vh; */
   padding: 1rem;
-  width: 70vw;
-  background-color: rgb(20, 20, 20);
+  width:90vw;
+  /* background-color: rgb(20, 20, 20); */
   border-radius: 0.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
@@ -863,11 +879,62 @@ html{
 }
 
 .projects-item{
-  width: 20vw;
-  height: 50vh;
+  width: 17rem;
+  height: 22rem;
   border-radius: 0.5rem;
-  background-color:rgb(40, 40, 40);
+  background-color:rgb(20, 20, 20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
  
+}
+
+.projects-item-picture-background{
+  width: 17rem;
+  height: 14rem;
+  background-color: rgb(240, 240, 240);
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.projects-item-picture{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 13rem;
+  height: 13rem;
+  /* background-color: rgb(240, 240, 240); */
+  border-radius: 0.5rem;
+}
+
+.projects-item-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+    font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;}
+
+
+.projects-item-details-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.projects-item-bracket{
+  font-size: 3rem;
+  color: #7848c4;
+  /* font-weight: bold; */
+}
+
+.projects-item-description {
+  font-size: 0.70rem;
+  color: rgb(240, 240, 240);
+  font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
+  width: 14rem;
+  /* font-weight: bold; */
 }
 
 #contact {
