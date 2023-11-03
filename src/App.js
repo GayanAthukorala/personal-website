@@ -31,44 +31,63 @@ import "./App.css";
 import React, { useEffect, useState, useRef, useContext } from "react";
 
 function App() {
-  const [experienceToggle, setExperienceToggle] = useState("1");
+  const [experienceToggle, setExperienceToggle] = useState(1);
   const [coopButtonClicked, setCoopButton] = useState(false);
   const [clubButtonClicked, setClubButton] = useState(false);
 
   const allBtn = document.getElementById("allBtn");
   const clubBtn = document.getElementById("clubBtn");
   const coopBtn = document.getElementById("coopBtn");
+  const ScotiabankExperience = document.getElementById("Scotiabank");
+  const OntarioHealthExperience = document.getElementById("OntarioHealth");
+  const DeltaHacksExperience = document.getElementById("DeltaHacks");
+  const TechMahindraExperience = document.getElementById("TechMahindra");
+  const RocketryExperience = document.getElementById("Rocketry");
 
   const allButtonClick = () => {
-    setExperienceToggle(1);
+    // setExperienceToggle(1);
+    ScotiabankExperience.style.display = "flex";
+    TechMahindraExperience.style.display = "flex";
+    OntarioHealthExperience.style.display = "flex";
+    DeltaHacksExperience.style.display = "flex";
+    RocketryExperience.style.display = "flex";
     allBtn.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)";
-    allBtn.style.width = "15rem";
+    allBtn.style.width = "17rem";
     allBtn.style.clipPath = "polygon(0 0, 94.5% 0, 100% 100%, 5.5% 100%)";
-    clubBtn.style.width = "10rem";
+    clubBtn.style.width = "12rem";
     clubBtn.style.clipPath = "polygon(0 0, 92% 0, 100% 100%, 0 100%)";
-    coopBtn.style.width = "10rem";
+    coopBtn.style.width = "12rem";
     coopBtn.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 8% 100%)";
   };
 
   const clubButtonClick = () => {
-    setExperienceToggle(0);
+    // setExperienceToggle(0);
+    ScotiabankExperience.style.display = "none";
+    TechMahindraExperience.style.display = "none";
+    OntarioHealthExperience.style.display = "none";
+    DeltaHacksExperience.style.display = "flex";
+    RocketryExperience.style.display = "flex";
 
-    allBtn.style.width = "10rem";
+    allBtn.style.width = "12rem";
     allBtn.style.clipPath = "polygon(0 0, 92% 0, 100% 100%, 8% 100%)";
-    clubBtn.style.width = "15rem";
+    clubBtn.style.width = "17rem";
     clubBtn.style.clipPath = "polygon(0 0, 94.5% 0, 100% 100%, 0 100%)";
-    coopBtn.style.width = "10rem";
+    coopBtn.style.width = "12rem";
     coopBtn.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 8% 100%)";
   };
 
   const coopButtonClick = () => {
-    setExperienceToggle(2);
-    allBtn.style.width = "10rem";
+    // setExperienceToggle(2);
+    ScotiabankExperience.style.display = "flex";
+    TechMahindraExperience.style.display = "flex";
+    OntarioHealthExperience.style.display = "flex";
+    DeltaHacksExperience.style.display = "none";
+    RocketryExperience.style.display = "none";
+    allBtn.style.width = "12rem";
     allBtn.style.clipPath = "polygon(0 0, 92% 0, 100% 100%, 8% 100%)";
-    clubBtn.style.width = "10rem";
+    clubBtn.style.width = "12rem";
     clubBtn.style.clipPath = "polygon(0 0, 92% 0, 100% 100%, 0 100%)";
-
-    coopBtn.style.width = "15rem";
+    coopBtn.style.width = "17rem";
     coopBtn.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 5.5% 100%)";
   };
 
@@ -200,7 +219,7 @@ function App() {
           <div className="about-toggle">
             <button className="club-btn" id="clubBtn" onClick={clubButtonClick}>
               {" "}
-              Extracurriculars & Leadership Experience{" "}
+              Leadership Experience{" "}
             </button>
             <button className="all-btn" id="allBtn" onClick={allButtonClick}>
               {" "}
@@ -211,169 +230,80 @@ function App() {
               Work Experience{" "}
             </button>
           </div>
-
-          {experienceToggle === 0 ? (
-            <div className="about-experience-wrapper">
-              <div className="about-experience-grid-item">
-                <div className="about-experience">
-                  <div className="about-experience-image-frame">
-                    <img className="about-experience-image" src={DeltaHacks} />
-                  </div>
-                  <div className="about-experience-title-frame">
-                    <div className="about-experience-title">DeltaHacks</div>
-                    <div className="about-experience-role">
-                      <span className="name">[</span> Logistics Executive{" "}
-                      <span className="name">]</span>
-                    </div>
-                  </div>
+          <div className="about-experience-wrapper">
+            <div id="Scotiabank" className="about-experience-grid-item">
+              <div className="about-experience">
+                <div className="about-experience-image-frame">
+                  <img className="about-experience-image" src={Scotiabank} />
                 </div>
-              </div>
-
-              <div className="about-experience-grid-item">
-                <div className="about-experience">
-                  <div className="about-experience-image-frame">
-                    <img className="about-experience-image" src={Rocketry} />
-                  </div>
-                  <div className="about-experience-title-frame">
-                    <div className="about-experience-title">
-                      McMaster Rocketry Team
-                    </div>
-                    <div className="about-experience-role">
-                      <span className="name">[</span> Payload Subteam{" "}
-                      <span className="name">]</span>
-                    </div>
+                <div className="about-experience-title-frame">
+                  <div className="about-experience-title">Scotiabank</div>
+                  <div className="about-experience-role">
+                    <span className="name">[</span> Cloud Security Engineer
+                    Intern <span className="name">]</span>
                   </div>
                 </div>
               </div>
             </div>
-          ) : experienceToggle === 1 ? (
-            <div className="about-experience-wrapper">
-              <div className="about-experience-grid-item">
-                <div className="about-experience">
-                  <div className="about-experience-image-frame">
-                    <img className="about-experience-image" src={Scotiabank} />
-                  </div>
-                  <div className="about-experience-title-frame">
-                    <div className="about-experience-title">Scotiabank</div>
-                    <div className="about-experience-role">
-                      <span className="name">[</span> Cloud Security Engineer
-                      Intern <span className="name">]</span>
-                    </div>
-                  </div>
+            <div id="OntarioHealth" className="about-experience-grid-item">
+              <div className="about-experience">
+                <div className="about-experience-image-frame">
+                  <img className="about-experience-image" src={OntarioHealth} />
                 </div>
-              </div>
-              <div className="about-experience-grid-item">
-                <div className="about-experience">
-                  <div className="about-experience-image-frame">
-                    <img
-                      className="about-experience-image"
-                      src={OntarioHealth}
-                    />
-                  </div>
-                  <div className="about-experience-title-frame">
-                    <div className="about-experience-title">Ontario Health</div>
-                    <div className="about-experience-role">
-                      <span className="name">[</span> Software Developer Intern{" "}
-                      <span className="name">]</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="about-experience-grid-item">
-                <div className="about-experience">
-                  <div className="about-experience-image-frame">
-                    <img className="about-experience-image" src={DeltaHacks} />
-                  </div>
-                  <div className="about-experience-title-frame">
-                    <div className="about-experience-title">DeltaHacks</div>
-                    <div className="about-experience-role">
-                      <span className="name">[</span> Logistics Executive{" "}
-                      <span className="name">]</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="about-experience-grid-item">
-                <div className="about-experience">
-                  <div className="about-experience-image-frame">
-                    <img className="about-experience-image" src={TechM} />
-                  </div>
-                  <div className="about-experience-title-frame">
-                    <div className="about-experience-title">Tech Mahindra</div>
-                    <div className="about-experience-role">
-                      <span className="name">[</span> Jr. Software Engineer{" "}
-                      <span className="name">]</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="about-experience-grid-item">
-                <div className="about-experience">
-                  <div className="about-experience-image-frame">
-                    <img className="about-experience-image" src={Rocketry} />
-                  </div>
-                  <div className="about-experience-title-frame">
-                    <div className="about-experience-title">
-                      McMaster Rocketry Team
-                    </div>
-                    <div className="about-experience-role">
-                      <span className="name">[</span> Payload Subteam{" "}
-                      <span className="name">]</span>
-                    </div>
+                <div className="about-experience-title-frame">
+                  <div className="about-experience-title">Ontario Health</div>
+                  <div className="about-experience-role">
+                    <span className="name">[</span> Software Developer Intern{" "}
+                    <span className="name">]</span>
                   </div>
                 </div>
               </div>
             </div>
-          ) : (
-            <div className="about-experience-wrapper">
-              <div className="about-experience-grid-item">
-                <div className="about-experience">
-                  <div className="about-experience-image-frame">
-                    <img className="about-experience-image" src={Scotiabank} />
-                  </div>
-                  <div className="about-experience-title-frame">
-                    <div className="about-experience-title">Scotiabank</div>
-                    <div className="about-experience-role">
-                      <span className="name">[</span> Cloud Security Engineer
-                      Intern <span className="name">]</span>
-                    </div>
-                  </div>
+            <div id="DeltaHacks" className="about-experience-grid-item">
+              <div className="about-experience">
+                <div className="about-experience-image-frame">
+                  <img className="about-experience-image" src={DeltaHacks} />
                 </div>
-              </div>
-              <div className="about-experience-grid-item">
-                <div className="about-experience">
-                  <div className="about-experience-image-frame">
-                    <img
-                      className="about-experience-image"
-                      src={OntarioHealth}
-                    />
-                  </div>
-                  <div className="about-experience-title-frame">
-                    <div className="about-experience-title">Ontario Health</div>
-                    <div className="about-experience-role">
-                      <span className="name">[</span> Software Developer Intern{" "}
-                      <span className="name">]</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="about-experience-grid-item">
-                <div className="about-experience">
-                  <div className="about-experience-image-frame">
-                    <img className="about-experience-image" src={TechM} />
-                  </div>
-                  <div className="about-experience-title-frame">
-                    <div className="about-experience-title">Tech Mahindra</div>
-                    <div className="about-experience-role">
-                      <span className="name">[</span> Jr. Software Engineer{" "}
-                      <span className="name">]</span>
-                    </div>
+                <div className="about-experience-title-frame">
+                  <div className="about-experience-title">DeltaHacks</div>
+                  <div className="about-experience-role">
+                    <span className="name">[</span> Logistics Executive{" "}
+                    <span className="name">]</span>
                   </div>
                 </div>
               </div>
             </div>
-          )}
+            <div id="TechMahindra" className="about-experience-grid-item">
+              <div className="about-experience">
+                <div className="about-experience-image-frame">
+                  <img className="about-experience-image" src={TechM} />
+                </div>
+                <div className="about-experience-title-frame">
+                  <div className="about-experience-title">Tech Mahindra</div>
+                  <div className="about-experience-role">
+                    <span className="name">[</span> Jr. Software Engineer{" "}
+                    <span className="name">]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="Rocketry" className="about-experience-grid-item">
+              <div className="about-experience">
+                <div className="about-experience-image-frame">
+                  <img className="about-experience-image" src={Rocketry} />
+                </div>
+                <div className="about-experience-title-frame">
+                  <div className="about-experience-title">
+                    McMaster Rocketry Team
+                  </div>
+                  <div className="about-experience-role">
+                    <span className="name">[</span> Payload Subteam{" "}
+                    <span className="name">]</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div id="projects">
@@ -402,60 +332,55 @@ function App() {
             </div>
             <div className="projects-background-grid-item">
               <div className="projects-item">
-                <div className="projects-item">
-                  <div className="projects-item-picture-background">
-                    <img
-                      className="projects-item-picture"
-                      src={ZeroFoodWaste}
-                    />
-                  </div>
+                <div className="projects-item-picture-background">
+                  <img className="projects-item-picture" src={ZeroFoodWaste} />
+                </div>
+                <div className="projects-item-title-wrapper">
                   <div className="projects-item-title">ZeroFoodWaste</div>
-                  <div className="projects-item-details-wrapper">
-                    <div className="projects-item-bracket">[</div>
-                    <div className="projects-item-description">
-                      {" "}
-                      Learn New Recipes with Personalized Ingredient Amounts to
-                      Eliminate Food Wastage
-                    </div>
-                    <div className="projects-item-bracket">]</div>
+                </div>
+                <div className="projects-item-details-wrapper">
+                  <div className="projects-item-bracket">[</div>
+                  <div className="projects-item-description">
+                    {" "}
+                    Learn New Recipes with Personalized Ingredient Amounts to
+                    Eliminate Food Wastage
                   </div>
+                  <div className="projects-item-bracket">]</div>
                 </div>
               </div>
             </div>
             <div className="projects-background-grid-item">
               <div className="projects-item">
-                <div className="projects-item">
-                  <div className="projects-item-picture-background">
-                    <img className="projects-item-picture" src={Verses} />
-                  </div>
+                <div className="projects-item-picture-background">
+                  <img className="projects-item-picture" src={Verses} />
+                </div>
+                <div className="projects-item-title-wrapper">
                   <div className="projects-item-title">Verses</div>
-                  <div className="projects-item-details-wrapper">
-                    <div className="projects-item-bracket">[</div>
-                    <div className="projects-item-description">
-                      {" "}
-                      A music quiz app for you to test yourself and your friends
-                      on your music taste
-                    </div>
-                    <div className="projects-item-bracket">]</div>
+                </div>
+                <div className="projects-item-details-wrapper">
+                  <div className="projects-item-bracket">[</div>
+                  <div className="projects-item-description">
+                    {" "}
+                    A music quiz app for you to test yourself and your friends
+                    on your music taste
                   </div>
+                  <div className="projects-item-bracket">]</div>
                 </div>
               </div>
             </div>
             <div className="projects-background-grid-item">
               <div className="projects-item">
-                <div className="projects-item">
-                  <div className="projects-item-picture-background">
-                    <img className="projects-item-picture" src={IslandGen} />
+                <div className="projects-item-picture-background">
+                  <img className="projects-item-picture" src={IslandGen} />
+                </div>
+                <div className="projects-item-title">Island Generator</div>
+                <div className="projects-item-details-wrapper">
+                  <div className="projects-item-bracket">[</div>
+                  <div className="projects-item-description">
+                    {" "}
+                    Find Local Businesses in your Area
                   </div>
-                  <div className="projects-item-title">Island Generator</div>
-                  <div className="projects-item-details-wrapper">
-                    <div className="projects-item-bracket">[</div>
-                    <div className="projects-item-description">
-                      {" "}
-                      Find Local Businesses in your Area
-                    </div>
-                    <div className="projects-item-bracket">]</div>
-                  </div>
+                  <div className="projects-item-bracket">]</div>
                 </div>
               </div>
             </div>

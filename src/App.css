@@ -715,21 +715,21 @@ html{
 
 .club-btn{
   height: 2.5rem;
-  width: 10rem;
+  width: 12rem;
   clip-path: polygon(0 0, 92% 0, 100% 100%, 0 100%);
   background-color:#7848c4;
   border: #7848c4;  
   border-bottom-left-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
   color: rgb(220, 220, 220);
-  font-size: medium;
+  font-size: 0.75rem;
   font-weight: bold;
   transition: 0.5s;
 }
 
 .all-btn{
   height: 2.5rem;
-    width: 15rem;
+    width: 17rem;
   clip-path: polygon(0 0, 94.5% 0, 100% 100%, 5.5% 100%);
   background-color: #7848c4;
     border: none;
@@ -737,7 +737,7 @@ html{
     border-top-right-radius: 0.5rem;
     border-top-left-radius: 0.1rem;
     color: rgb(220, 220, 220);
-    font-size: medium;
+    font-size: 0.75rem;
     font-weight: bold;
     transition: 0.5s;
 
@@ -746,7 +746,7 @@ html{
 .coop-btn{
 
   height: 2.5rem;
-  width: 10rem;
+  width: 12rem;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
   background-color: #7848c4;
   border: none;
@@ -755,7 +755,7 @@ html{
   border-bottom-right-radius: 0.5rem;
   border-top-left-radius: 0.1rem;
   color:rgb(220, 220, 220);
-  font-size: medium;
+  font-size: 0.75rem;
   font-weight: bold;
   transition: 0.5s;
 }
@@ -774,6 +774,7 @@ html{
   /* Center the grid items horizontally */
   align-items: stretch;
   /* Stretch grid items to match the height */
+
   
 }
 
@@ -781,6 +782,9 @@ html{
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: fadeIn 0.3s ease-in-out;
+  transform: 0.3s;
+  
 }
 
 .about-experience{
@@ -842,6 +846,7 @@ html{
   /* height: 100vh; */
   display: flex;
   flex-direction: column;
+  
 
 
 }
@@ -892,10 +897,10 @@ html{
   flex-direction: column;
   align-items: center;
   -ms-align-items: center;
- overflow: hidden;
- transition: 0.2s;
+  overflow: hidden;
+  transition: 0.2s;
   animation: fadeIn 2s;
-  
+
 }
 
 @keyframes fadeIn {
