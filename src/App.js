@@ -35,22 +35,35 @@ function App() {
   const [coopButtonClicked, setCoopButton] = useState(false);
   const [clubButtonClicked, setClubButton] = useState(false);
 
-  const allBtn = document.getElementById("allBtn");
-  const clubBtn = document.getElementById("clubBtn");
-  const coopBtn = document.getElementById("coopBtn");
   const ScotiabankExperience = document.getElementById("Scotiabank");
   const OntarioHealthExperience = document.getElementById("OntarioHealth");
   const DeltaHacksExperience = document.getElementById("DeltaHacks");
   const TechMahindraExperience = document.getElementById("TechMahindra");
   const RocketryExperience = document.getElementById("Rocketry");
+  const allBtn = document.getElementById("allBtn");
+  const clubBtn = document.getElementById("clubBtn");
+  const coopBtn = document.getElementById("coopBtn");
 
   const allButtonClick = () => {
-    // setExperienceToggle(1);
+    const ScotiabankExperience = document.getElementById("Scotiabank");
+    const OntarioHealthExperience = document.getElementById("OntarioHealth");
+    const DeltaHacksExperience = document.getElementById("DeltaHacks");
+    const TechMahindraExperience = document.getElementById("TechMahindra");
+    const RocketryExperience = document.getElementById("Rocketry");
+    const allBtn = document.getElementById("allBtn");
+    const clubBtn = document.getElementById("clubBtn");
+    const coopBtn = document.getElementById("coopBtn");
+    setExperienceToggle(1);
     ScotiabankExperience.style.display = "flex";
+
     TechMahindraExperience.style.display = "flex";
+
     OntarioHealthExperience.style.display = "flex";
+
     DeltaHacksExperience.style.display = "flex";
+
     RocketryExperience.style.display = "flex";
+
     allBtn.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)";
     allBtn.style.width = "17rem";
     allBtn.style.clipPath = "polygon(0 0, 94.5% 0, 100% 100%, 5.5% 100%)";
@@ -61,11 +74,23 @@ function App() {
   };
 
   const clubButtonClick = () => {
+    const ScotiabankExperience = document.getElementById("Scotiabank");
+    const OntarioHealthExperience = document.getElementById("OntarioHealth");
+    const DeltaHacksExperience = document.getElementById("DeltaHacks");
+    const TechMahindraExperience = document.getElementById("TechMahindra");
+    const RocketryExperience = document.getElementById("Rocketry");
+    const allBtn = document.getElementById("allBtn");
+    const clubBtn = document.getElementById("clubBtn");
+    const coopBtn = document.getElementById("coopBtn");
     // setExperienceToggle(0);
     ScotiabankExperience.style.display = "none";
+
     TechMahindraExperience.style.display = "none";
+
     OntarioHealthExperience.style.display = "none";
+
     DeltaHacksExperience.style.display = "flex";
+
     RocketryExperience.style.display = "flex";
 
     allBtn.style.width = "12rem";
@@ -77,12 +102,25 @@ function App() {
   };
 
   const coopButtonClick = () => {
+    const ScotiabankExperience = document.getElementById("Scotiabank");
+    const OntarioHealthExperience = document.getElementById("OntarioHealth");
+    const DeltaHacksExperience = document.getElementById("DeltaHacks");
+    const TechMahindraExperience = document.getElementById("TechMahindra");
+    const RocketryExperience = document.getElementById("Rocketry");
+    const allBtn = document.getElementById("allBtn");
+    const clubBtn = document.getElementById("clubBtn");
+    const coopBtn = document.getElementById("coopBtn");
     // setExperienceToggle(2);
     ScotiabankExperience.style.display = "flex";
+
     TechMahindraExperience.style.display = "flex";
+
     OntarioHealthExperience.style.display = "flex";
+
     DeltaHacksExperience.style.display = "none";
+
     RocketryExperience.style.display = "none";
+
     allBtn.style.width = "12rem";
     allBtn.style.clipPath = "polygon(0 0, 92% 0, 100% 100%, 8% 100%)";
     clubBtn.style.width = "12rem";
