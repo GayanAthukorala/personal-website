@@ -53,7 +53,6 @@ function App() {
     const allBtn = document.getElementById("allBtn");
     const clubBtn = document.getElementById("clubBtn");
     const coopBtn = document.getElementById("coopBtn");
-    setExperienceToggle(1);
     ScotiabankExperience.style.display = "flex";
 
     TechMahindraExperience.style.display = "flex";
@@ -355,9 +354,7 @@ function App() {
                 <div className="projects-item-picture-background">
                   <img className="projects-item-picture" src={LocalLove} />
                 </div>
-                <div className="projects-item-title-wrapper">
-                  <div className="projects-item-title">Local Love</div>
-                </div>
+                <div className="projects-item-title">Local Love</div>
                 <div className="projects-item-details-wrapper">
                   <div className="projects-item-bracket">[</div>
                   <div className="projects-item-description">
@@ -373,14 +370,13 @@ function App() {
                 <div className="projects-item-picture-background">
                   <img className="projects-item-picture" src={ZeroFoodWaste} />
                 </div>
-                <div className="projects-item-title-wrapper">
-                  <div className="projects-item-title">ZeroFoodWaste</div>
-                </div>
+                <div className="projects-item-title">ZeroFoodWaste</div>
                 <div className="projects-item-details-wrapper">
                   <div className="projects-item-bracket">[</div>
                   <div className="projects-item-description">
                     {" "}
-                    Learn New Recipes with Personalized Ingredient Amounts to
+                    Learn Recipes with Personalized Ingredient Amounts to
+                    <br />
                     Eliminate Food Wastage
                   </div>
                   <div className="projects-item-bracket">]</div>
@@ -392,9 +388,7 @@ function App() {
                 <div className="projects-item-picture-background">
                   <img className="projects-item-picture" src={Verses} />
                 </div>
-                <div className="projects-item-title-wrapper">
-                  <div className="projects-item-title">Verses</div>
-                </div>
+                <div className="projects-item-title">Verses</div>
                 <div className="projects-item-details-wrapper">
                   <div className="projects-item-bracket">[</div>
                   <div className="projects-item-description">
