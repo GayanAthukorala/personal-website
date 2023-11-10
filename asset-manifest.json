@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.df747ac1.css",
-    "main.js": "/personal-website/static/js/main.bc45f018.js",
+    "main.css": "/personal-website/static/css/main.e0253551.css",
+    "main.js": "/personal-website/static/js/main.919340a1.js",
     "static/js/496.ed31fa49.chunk.js": "/personal-website/static/js/496.ed31fa49.chunk.js",
     "static/media/DarkerPic.png": "/personal-website/static/media/DarkerPic.7de02539412c8d63eed1.png",
-    "static/media/Resume.pdf": "/personal-website/static/media/Resume.23a4c7b0fca20dd5c372.pdf",
     "static/media/sample.svg": "/personal-website/static/media/sample.4b7af8c6c12794dcc3fbdd0395178911.svg",
+    "static/media/Gayan Athukorala Resume.pdf": "/personal-website/static/media/Gayan Athukorala Resume.bb05dc99a574a2ab168c.pdf",
     "static/media/React Logo.png": "/personal-website/static/media/React Logo.8a6fc0a24a800d1e0f4a.png",
     "static/media/Python Logo.png": "/personal-website/static/media/Python Logo.82efb64f8698a267f8bf.png",
     "static/media/Java Logo.png": "/personal-website/static/media/Java Logo.05ea71c6977b201cca1c.png",
@@ -26,12 +26,12 @@
     "static/media/GitHub Logo.png": "/personal-website/static/media/GitHub Logo.b983e5a8a95d734ea626.png",
     "static/media/logo.svg": "/personal-website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/personal-website/index.html",
-    "main.df747ac1.css.map": "/personal-website/static/css/main.df747ac1.css.map",
-    "main.bc45f018.js.map": "/personal-website/static/js/main.bc45f018.js.map",
+    "main.e0253551.css.map": "/personal-website/static/css/main.e0253551.css.map",
+    "main.919340a1.js.map": "/personal-website/static/js/main.919340a1.js.map",
     "496.ed31fa49.chunk.js.map": "/personal-website/static/js/496.ed31fa49.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df747ac1.css",
-    "static/js/main.bc45f018.js"
+    "static/css/main.e0253551.css",
+    "static/js/main.919340a1.js"
   ]
 }
