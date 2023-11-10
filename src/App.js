@@ -22,16 +22,18 @@ import LinkedInIcon from "./images/Linkedin Icon.png";
 import OntarioHealth from "./images/Ontario Health Logo.png";
 import Scotiabank from "./images/ScotiabankLogo.png";
 import DeltaHacks from "./images/DeltaHacksLogo.png";
-import Resume from "./Resume.pdf";
+import Resume from "./Gayan Athukorala Resume.pdf";
 import LocalLove from "./images/LocalLove.png";
 import ZeroFoodWaste from "./images/ZeroFoodWaste.png";
 import Verses from "./images/VersesNew.png";
 import IslandGen from "./images/sample.svg";
 import "./App.css";
 import React, { useEffect, useState, useRef, useContext } from "react";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 function App() {
-  const [experienceToggle, setExperienceToggle] = useState(1);
+  const [LocalLovePop, setLovalLovePop] = useState(false);
   const [coopButtonClicked, setCoopButton] = useState(false);
   const [clubButtonClicked, setClubButton] = useState(false);
 
@@ -129,15 +131,22 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="overlay">
       <div className="nav">
         <div className="intro">
           Hi<span className="name">!</span> &nbsp; My Name is Gayan Athukorala
           <span className="name">.</span>
         </div>
         <div className="menu-links">
-          <img className="linkedin-icon" src={LinkedInIcon} />
-          <img className="github-icon" src={GitHubIcon} />
+          <a
+            href="https://www.linkedin.com/in/gayanathukorala/"
+            target="_blank"
+          >
+            <img className="linkedin-icon" src={LinkedInIcon} />
+          </a>
+          <a href="https://github.com/GayanAthukorala " target="_blank">
+            <img className="github-icon" src={GitHubIcon} />
+          </a>
         </div>
       </div>
       <div className="menu">
@@ -209,17 +218,9 @@ function App() {
       </div>
       <span className="lower-menu">
         <div className="menu-button-wrapper">
-          <button
-            className="menu-button"
-            onClick={() =>
-              window.open(
-                "file://C:UsersgayanpersonalWebsitepersonal-websitesrcResume.pdf",
-                "_blank"
-              )
-            }
-          >
-            Resume
-          </button>
+          <a href={Resume} type="application/pdf" target="_blank">
+            <button className="menu-button">Resume</button>
+          </a>
           <button
             className="menu-button"
             onClick={() =>
@@ -350,7 +351,10 @@ function App() {
         <div className="projects-info">
           <div className="projects-background">
             <div className="projects-background-grid-item">
-              <div className="projects-item">
+              <button
+                onClick={() => setLovalLovePop(true)}
+                className="projects-item"
+              >
                 <div className="projects-item-picture-background">
                   <img className="projects-item-picture" src={LocalLove} />
                 </div>
@@ -363,7 +367,12 @@ function App() {
                   </div>
                   <div className="projects-item-bracket">]</div>
                 </div>
-              </div>
+              </button>
+              {/* {LocalLovePop == true ? (
+                <div className="modal">HELOOOOO</div>
+              ) : (
+                <div />
+              )} */}
             </div>
             <div className="projects-background-grid-item">
               <div className="projects-item">
@@ -427,7 +436,8 @@ function App() {
           Lets connect<span className="name">,&nbsp;</span> I would love to have
           a coffee chat<span className="name">!</span>{" "}
         </div>
-        <div className="contact-message"></div>
+        <textarea className="contact-message"></textarea>
+
         <div className="contact-button-container">
           <button className="contact-button">Send</button>
         </div>
