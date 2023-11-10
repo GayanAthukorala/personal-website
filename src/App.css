@@ -226,7 +226,7 @@ html{
   width: 2.5em;
   position: absolute;
   /* bottom: 100%; */
-  left: 45%;
+  left: 30%;
   top: 2em;
   scale: 0;
   /* transform: rotate(0deg); */
@@ -240,7 +240,7 @@ html{
     width: 2.8em;
     position: absolute;
     /* bottom: 100%; */
-    left: 33.75%;
+    left: 28%;
     top: 2em;
     scale: 0;
     transform: scaleX(-1) rotate(45deg);
@@ -380,7 +380,7 @@ html{
   width: 2.5em;
   position: absolute;
   /* bottom: 100%; */
-  left: 17.7%;
+  left: 14%;
   top: 2em;
   scale: 0;
   transform: scaleX(-1) rotate(-45deg) scaleY(-1);
@@ -393,7 +393,7 @@ html{
   width: 2.5em;
   position: absolute;
   /* bottom: 100%; */
-  left: 35.4%;
+  left: 34%;
   top: 2em;
   scale: 0;
   transform: scaleX(-1) rotate(45deg) scaleY(-1);
@@ -406,7 +406,7 @@ html{
   width: 2.5em;
   position: absolute;
   /* bottom: 100%; */
-  left: 53%;
+  left: 40%;
   top: 2em;
   scale: 0;
   transform: rotate(0deg) scaleX(-1) scaleY(-1);
@@ -456,27 +456,27 @@ html{
 #menu-items:hover>.row>.menu-item:hover+.mcmaster-logo {
   scale: 1;
   transform: rotate(-45deg) scaleX(-1);
-  top: -1em;
-  left: -3em;
+  top: -2em;
+  left: -3.5em;
 }
 
 #menu-items:hover>.row>.menu-item:hover ~  .techm-logo {
   scale: 1;
   transform: rotate(45deg) scaleX(-1);
-  top: -1em;
-  left: 19.5em;
+  top: -2em;
+  left: 16.5em;
 }
 
 #menu-items:hover>.row>.menu-item:hover ~ .soti-logo {
   scale: 1;
   transform: rotate(0deg) scaleX(-1);
-  top: -2.5em;
+  top: -3.5em;
 }
 
 #menu-items:hover>.row>.menu-item:hover~.rocketry-logo {
   scale: 1;
   transform: rotate(0deg) scaleX(-1);
-  top: -2.5em;
+  top: -3.5em;
 }
 
 /* Projects */
@@ -536,27 +536,27 @@ html{
 #menu-items:hover>.swapY>.row>.swapY:hover~.linkedin-logo {
   scale: 1;
   transform: rotate(-45deg) scaleX(-1) scaleY(-1);
-  top: -1em;
-  left: -2.5em;
+  top: -2em;
+  left: -3em;
 }
 
 #menu-items:hover>.swapY>.row>.swapY:hover~.coffee-logo {
   scale: 1;
   transform: rotate(0) scaleX(-1) scaleY(-1);
-  top: -2.5em;
+  top: -3.5em;
 }
 
 #menu-items:hover>.swapY>.row>.swapY:hover~.teams-logo {
   scale: 1;
   transform: rotate(0) scaleX(-1) scaleY(-1);
-    top: -2.5em;
+    top: -3.5em;
 }
 
 #menu-items:hover>.swapY>.row>.swapY:hover~.gmail-logo {
   scale: 1;
   transform: rotate(45deg) scaleX(-1) scaleY(-1);
-    top: -1em;
-  left: 58%;
+    top: -2em;
+  left: 55%;
 }
 
 /* My Photo */

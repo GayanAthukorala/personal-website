@@ -21,7 +21,7 @@ import GitHubIcon from "./images/GitHub Icon.png";
 import LinkedInIcon from "./images/Linkedin Icon.png";
 import OntarioHealth from "./images/Ontario Health Logo.png";
 import Scotiabank from "./images/ScotiabankLogo.png";
-import DeltaHacks from "./images/DeltaHacksLogo.png";
+import DeltaHacks from "./images/squareDeltahacks.png";
 import Resume from "./Gayan Athukorala Resume.pdf";
 import LocalLove from "./images/LocalLove.png";
 import ZeroFoodWaste from "./images/ZeroFoodWaste.png";
@@ -158,9 +158,9 @@ function App() {
                 ABOUT
               </a>
               <img className="mcmaster-logo" src={McMaster} />
-              <img className="techm-logo" src={TechM} />
+              <img className="techm-logo" src={DeltaHacks} />
               <img className="soti-logo" src={OntarioHealth} />
-              <img className="rocketry-logo" src={Rocketry} />
+              <img className="rocketry-logo" src={Scotiabank} />
               <div className="bar-wrapper">
                 <div className="bar-peg" />
               </div>
@@ -249,10 +249,10 @@ function App() {
             ideas into a reality.
           </div>
           <div className="about-paragraph">
-            Currently, I'm working in AI and Cloud at Ontario Health, but I have
-            experience in QA and development through previous internships, my
-            education, and projects. Outside of work I love spending time with
-            my friends, playing volleyball, and going skiing!{" "}
+            Currently, I'm working in Cloud Security at Scotiabank, but I have
+            experience in Cloud, AI, QA, and development through previous
+            internships, my education, and projects. Outside of work I love
+            spending time with my friends, playing volleyball, and going skiing!{" "}
           </div>
           <div className="about-toggle">
             <button className="club-btn" id="clubBtn" onClick={clubButtonClick}>
