@@ -31,6 +31,8 @@ import "./App.css";
 import React, { useEffect, useState, useRef, useContext } from "react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
+import Project from "./Componenets/Project";
+import Experience from "./Componenets/Experience";
 
 function App() {
   const [LocalLovePop, setLovalLovePop] = useState(false);
@@ -72,6 +74,9 @@ function App() {
     clubBtn.style.clipPath = "polygon(0 0, 92% 0, 100% 100%, 0 100%)";
     coopBtn.style.width = "12rem";
     coopBtn.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 8% 100%)";
+    allBtn.style.backgroundColor = "#916FFF";
+    coopBtn.style.backgroundColor = "#7848c4";
+    clubBtn.style.backgroundColor = "#7848c4";
   };
 
   const clubButtonClick = () => {
@@ -100,6 +105,9 @@ function App() {
     clubBtn.style.clipPath = "polygon(0 0, 94.5% 0, 100% 100%, 0 100%)";
     coopBtn.style.width = "12rem";
     coopBtn.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 8% 100%)";
+    allBtn.style.backgroundColor = "#7848c4";
+    coopBtn.style.backgroundColor = "#7848c4";
+    clubBtn.style.backgroundColor = "#916FFF";
   };
 
   const coopButtonClick = () => {
@@ -128,6 +136,9 @@ function App() {
     clubBtn.style.clipPath = "polygon(0 0, 92% 0, 100% 100%, 0 100%)";
     coopBtn.style.width = "17rem";
     coopBtn.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 5.5% 100%)";
+    allBtn.style.backgroundColor = "#7848c4";
+    coopBtn.style.backgroundColor = "#916FFF";
+    clubBtn.style.backgroundColor = "#7848c4";
   };
 
   return (
@@ -269,78 +280,40 @@ function App() {
             </button>
           </div>
           <div className="about-experience-wrapper">
-            <div id="Scotiabank" className="about-experience-grid-item">
-              <div className="about-experience">
-                <div className="about-experience-image-frame">
-                  <img className="about-experience-image" src={Scotiabank} />
-                </div>
-                <div className="about-experience-title-frame">
-                  <div className="about-experience-title">Scotiabank</div>
-                  <div className="about-experience-role">
-                    <span className="name">[</span> Cloud Security Engineer
-                    Intern <span className="name">]</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="OntarioHealth" className="about-experience-grid-item">
-              <div className="about-experience">
-                <div className="about-experience-image-frame">
-                  <img className="about-experience-image" src={OntarioHealth} />
-                </div>
-                <div className="about-experience-title-frame">
-                  <div className="about-experience-title">Ontario Health</div>
-                  <div className="about-experience-role">
-                    <span className="name">[</span> Software Developer Intern{" "}
-                    <span className="name">]</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="DeltaHacks" className="about-experience-grid-item">
-              <div className="about-experience">
-                <div className="about-experience-image-frame">
-                  <img className="about-experience-image" src={DeltaHacks} />
-                </div>
-                <div className="about-experience-title-frame">
-                  <div className="about-experience-title">DeltaHacks</div>
-                  <div className="about-experience-role">
-                    <span className="name">[</span> Logistics Executive{" "}
-                    <span className="name">]</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="TechMahindra" className="about-experience-grid-item">
-              <div className="about-experience">
-                <div className="about-experience-image-frame">
-                  <img className="about-experience-image" src={TechM} />
-                </div>
-                <div className="about-experience-title-frame">
-                  <div className="about-experience-title">Tech Mahindra</div>
-                  <div className="about-experience-role">
-                    <span className="name">[</span> Jr. Software Engineer{" "}
-                    <span className="name">]</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="Rocketry" className="about-experience-grid-item">
-              <div className="about-experience">
-                <div className="about-experience-image-frame">
-                  <img className="about-experience-image" src={Rocketry} />
-                </div>
-                <div className="about-experience-title-frame">
-                  <div className="about-experience-title">
-                    McMaster Rocketry Team
-                  </div>
-                  <div className="about-experience-role">
-                    <span className="name">[</span> Payload Subteam{" "}
-                    <span className="name">]</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Experience
+              id="Scotiabank"
+              picture={Scotiabank}
+              company="Scotiabank"
+              role="Cloud Security Engineer
+                    Intern "
+            />
+
+            <Experience
+              id="OntarioHealth"
+              picture={OntarioHealth}
+              company="Ontario Health"
+              role="Software Developer Intern "
+            />
+            <Experience
+              id="DeltaHacks"
+              picture={DeltaHacks}
+              company="DeltaHacks"
+              role="Logistics Executive "
+            />
+
+            <Experience
+              id="TechMahindra"
+              picture={TechM}
+              company="Tech Mahindra"
+              role="Jr. Software Engineer "
+            />
+
+            <Experience
+              id="Rocketry"
+              picture={Rocketry}
+              company="McMaster Rocketry Team"
+              role="Payload Subteam "
+            />
           </div>
         </div>
       </div>
@@ -350,81 +323,34 @@ function App() {
         </div>
         <div className="projects-info">
           <div className="projects-background">
-            <div className="projects-background-grid-item">
-              <button
-                onClick={() => setLovalLovePop(true)}
-                className="projects-item"
-              >
-                <div className="projects-item-picture-background">
-                  <img className="projects-item-picture" src={LocalLove} />
-                </div>
-                <div className="projects-item-title">Local Love</div>
-                <div className="projects-item-details-wrapper">
-                  <div className="projects-item-bracket">[</div>
-                  <div className="projects-item-description">
-                    {" "}
-                    Find Local Businesses in your Area
-                  </div>
-                  <div className="projects-item-bracket">]</div>
-                </div>
-              </button>
-              {/* {LocalLovePop == true ? (
-                <div className="modal">HELOOOOO</div>
-              ) : (
-                <div />
-              )} */}
-            </div>
-            <div className="projects-background-grid-item">
-              <div className="projects-item">
-                <div className="projects-item-picture-background">
-                  <img className="projects-item-picture" src={ZeroFoodWaste} />
-                </div>
-                <div className="projects-item-title">ZeroFoodWaste</div>
-                <div className="projects-item-details-wrapper">
-                  <div className="projects-item-bracket">[</div>
-                  <div className="projects-item-description">
-                    {" "}
-                    Learn Recipes with Personalized Ingredient Amounts to
-                    <br />
-                    Eliminate Food Wastage
-                  </div>
-                  <div className="projects-item-bracket">]</div>
-                </div>
-              </div>
-            </div>
-            <div className="projects-background-grid-item">
-              <div className="projects-item">
-                <div className="projects-item-picture-background">
-                  <img className="projects-item-picture" src={Verses} />
-                </div>
-                <div className="projects-item-title">Verses</div>
-                <div className="projects-item-details-wrapper">
-                  <div className="projects-item-bracket">[</div>
-                  <div className="projects-item-description">
-                    {" "}
-                    A music quiz app for you to test yourself and your friends
-                    on your music taste
-                  </div>
-                  <div className="projects-item-bracket">]</div>
-                </div>
-              </div>
-            </div>
-            <div className="projects-background-grid-item">
-              <div className="projects-item">
-                <div className="projects-item-picture-background">
-                  <img className="projects-item-picture" src={IslandGen} />
-                </div>
-                <div className="projects-item-title">Island Generator</div>
-                <div className="projects-item-details-wrapper">
-                  <div className="projects-item-bracket">[</div>
-                  <div className="projects-item-description">
-                    {" "}
-                    Find Local Businesses in your Area
-                  </div>
-                  <div className="projects-item-bracket">]</div>
-                </div>
-              </div>
-            </div>
+            <Project
+              link="https://github.com/GayanAthukorala/LocalLove-DeltaHacks9"
+              name="Local Love"
+              picture={LocalLove}
+              description="Find Local Businesses in your Area"
+            />
+            <Project
+              link="https://github.com/GayanAthukorala/ZeroFoodWaste"
+              name="ZeroFoodWaste"
+              picture={ZeroFoodWaste}
+              description="Learn Recipes with Personalized Ingredient Amounts to
+                    Eliminate Food Wastage"
+            />
+            <Project
+              link="https://github.com/GayanAthukorala/Verses-Hack-Western-9"
+              name="Verses"
+              picture={Verses}
+              description="A music quiz app for you to test yourself and your friends
+                    on your music taste"
+            />
+
+            <Project
+              link="https://github.com/GayanAthukorala/Island-Generator"
+              name="Island Generator"
+              picture={IslandGen}
+              description="Randomly generate islands with 15 customizable
+                    features"
+            />
           </div>
         </div>
       </div>
