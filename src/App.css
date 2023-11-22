@@ -618,7 +618,7 @@ html{
   /* border: solid #916FFF;
    */
   border:none;
-  background-color: #7n848c4;
+  background-color:#7848c4 ;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.5em;
   border-radius: 0.3em;
@@ -1202,4 +1202,9 @@ textarea {
   border-radius: 0.3em;
   transition: background-color 0.2s;
 
+}
+
+.contact-button:hover{
+  background-color: #916FFF;
+  cursor: pointer;
 }
