@@ -1,0 +1,239 @@
+.projects-background-grid-item {
+    display: flex;
+    /* Use flexbox layout */
+    flex-direction: column;
+    /* Arrange child elements vertically */
+    justify-content: center;
+    /* Center content horizontally within the grid item */
+    align-items: center;
+    height: 23rem;
+
+}
+
+.projects-item {
+    text-decoration: none;
+    width: 17rem;
+    height: 22rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -ms-align-items: center;
+    overflow: hidden;
+    transition: 0.2s;
+    animation: fadeIn 2s;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.projects-item:hover {
+    width: 18rem;
+    height: 23rem;
+    transition: 0.2s;
+    cursor: pointer;
+
+}
+
+
+/* .projects-item-info:hover{
+  width: 18rem;
+  height: 23rem;
+  transition: 0.2s;
+} */
+
+.projects-item:hover>.projects-item-picture-background {
+    width: 17.5rem;
+    height: 15rem;
+
+}
+
+.projects-item:hover>.projects-item-picture-background>.projects-item-picture {
+    width: 14rem;
+    height: 14rem;
+
+}
+
+.projects-item:hover>.projects-item-title-wrapper {
+    height: 3rem;
+    transition: 0.3s;
+    width: 17rem;
+
+}
+
+.projects-item:hover>.projects-item-title {
+    font-size: 1.6rem;
+
+}
+
+.projects-item:hover>.projects-item-details-wrapper>.projects-item-description {
+    font-size: 0.74rem;
+    /* width: 15rem; */
+
+
+}
+
+.projects-item:hover>.projects-item-details-wrapper {
+    width: 17.1rem;
+
+
+}
+
+.projects-item:hover>.projects-item-details-wrapper>.projects-item-bracket {
+    font-size: 3.1rem;
+
+}
+
+.projects-button-wrapper~.projects-item:hover::before {
+    content: "";
+    position: absolute;
+    height: 70%;
+    padding-top: 10em;
+    top: -60%;
+    width: 70%;
+    background-color: #7848c4;
+    animation: rotate 1.5s linear infinite;
+    transform-origin: bottom;
+}
+
+.projects-button-wrapper~.projects-item:hover::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(20, 20, 20);
+    inset: 0.25rem;
+    border-radius: 0.5rem;
+}
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+.projects-item-picture-background {
+    width: 16.5rem;
+    height: 14rem;
+    background-color: rgb(240, 240, 240);
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    z-index: 2;
+    transition: 0.2s
+}
+
+.projects-item-picture {
+    z-index: 2;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 13rem;
+    height: 13rem;
+    /* background-color: rgb(240, 240, 240); */
+    border-radius: 0.5rem;
+    transition: 0.2s;
+}
+
+.projects-item-title-wrapper {
+    height: 3rem;
+    width: 17rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    text-align: center;
+}
+
+.projects-item-title {
+    outline: none;
+    text-decoration: none;
+    z-index: 2;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(240, 240, 240);
+    font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
+    transition: 0.2s;
+}
+
+
+.projects-item-details-wrapper {
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 16rem;
+    transition: 0.2s;
+
+}
+
+.projects-item-bracket {
+    font-size: 3rem;
+    color: #7848c4;
+    transition: 0.2s;
+    /* font-weight: bold; */
+}
+
+.projects-item-description {
+    text-decoration: none;
+    font-size: 0.70rem;
+    color: rgb(240, 240, 240);
+    font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
+
+    transition: 0.2s;
+    /* font-weight: bold; */
+}
+
+/* .projects-item-info{
+  position: relative;
+    width: 17rem;
+    height: 22rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -ms-align-items: center;
+    overflow: hidden;
+    transition: 0.2s;
+    z-index: 0;
+} */
+
+
+
+.projects-button-wrapper {
+    text-decoration: none;
+    outline: none;
+}
+
+.projects-popup-background {
+    height: 20rem;
+    width: 50rem;
+    /* background-color: black;
+  border: none; */
+    background-color: rgb(50, 50, 50);
+
+}
