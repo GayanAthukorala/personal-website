@@ -3,7 +3,7 @@
   src: url();
 }
 body{
-  background-color: rgb(30,30,30);
+  background-color: rgb(20,20,20);
   margin: 0px;
 }
 
@@ -35,7 +35,7 @@ body::-webkit-scrollbar {
   height: clamp(3rem, 8vh, 6rem);
   width: clamp(10rem, 40vw, 40rem);
   border-radius: 0.5em;
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(40, 40, 40);
   color: rgb(240, 240, 240);
   text-align: center;
   display: flex;
@@ -826,14 +826,14 @@ html{
 .about-experience-image-frame{
   height: clamp(5rem, 20vh, 9rem);
   width: 10vw;
-  background-color:rgb(240, 240, 240);
+  /* background-color:rgb(40, 40, 40); */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .about-experience-image{
-  height: clamp(4rem, 18vh, 8rem);
+  height: 5rem;
   border-radius: 0.5rem;
 
 }
