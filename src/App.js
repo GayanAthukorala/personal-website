@@ -28,6 +28,8 @@ import ZeroFoodWaste from "./images/ZeroFoodWaste.png";
 import Verses from "./images/VersesNew.png";
 import IslandGen from "./images/sample.svg";
 import "./App.css";
+import "./About.css";
+import "./Projects.css";
 import React, { useEffect, useState, useRef, useContext } from "react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
@@ -167,11 +169,12 @@ function App() {
             <div className="row">
               <a href="#about" className="menu-item">
                 ABOUT
+                <img className="mcmaster-logo" src={McMaster} />
+                <img className="techm-logo" src={DeltaHacks} />
+                <img className="soti-logo" src={OntarioHealth} />
+                <img className="rocketry-logo" src={Scotiabank} />
               </a>
-              <img className="mcmaster-logo" src={McMaster} />
-              <img className="techm-logo" src={DeltaHacks} />
-              <img className="soti-logo" src={OntarioHealth} />
-              <img className="rocketry-logo" src={Scotiabank} />
+
               <div className="bar-wrapper">
                 <div className="bar-peg" />
               </div>
@@ -182,13 +185,12 @@ function App() {
                 <span className="swapY">
                   <a href="#contact" className="menu-item-2">
                     CONTACT
+                    <img className="gmail-logo" src={GmailLogo} />
+                    <img className="teams-logo" src={TeamsLogo} />
+                    <img className="coffee-logo" src={CoffeeLogo} />
+                    <img className="linkedin-logo" src={LinkedInLogo} />
                   </a>
                 </span>
-
-                <img className="gmail-logo" src={GmailLogo} />
-                <img className="teams-logo" src={TeamsLogo} />
-                <img className="coffee-logo" src={CoffeeLogo} />
-                <img className="linkedin-logo" src={LinkedInLogo} />
 
                 <div className="bar-wrapper">
                   <div className="bar-peg" />
@@ -199,17 +201,16 @@ function App() {
                 <span className="swapY">
                   <a href="#projects" className="menu-item-2">
                     PROJECTS
+                    <img className="js-logo" src={JS} />
+                    <img className="python-logo" src={Python} />
+                    <img className="react-logo" src={ReactLogo} />
+                    <img className="html-logo" src={HtmlLogo} />
+                    <img className="node-logo" src={NodeLogo} />
+                    <img className="sql-logo" src={SQLLogo} />
+                    <img className="java-logo" src={JavaLogo} />
+                    <img className="css-logo" src={CSSLogo} />
                   </a>
                 </span>
-
-                <img className="js-logo" src={JS} />
-                <img className="python-logo" src={Python} />
-                <img className="react-logo" src={ReactLogo} />
-                <img className="html-logo" src={HtmlLogo} />
-                <img className="node-logo" src={NodeLogo} />
-                <img className="sql-logo" src={SQLLogo} />
-                <img className="java-logo" src={JavaLogo} />
-                <img className="css-logo" src={CSSLogo} />
 
                 <div className="bar-wrapper">
                   <div className="bar-peg" />
@@ -220,14 +221,18 @@ function App() {
           </div>
         </div>
         <div className="pictures-wrapper">
-          <div className="profile-background">
-            <div className="image-cropper">
-              <img src={gayanPhoto} style={{ height: 350, width: 350 }} />
-            </div>
-          </div>
+          {/* <div className="image-cropper"> */}
+          <img src={gayanPhoto} class="image-cropper" />
+          {/* </div> */}
+          {/* <div className="blurb-wrapper"> */}
+          {/* <div className="blurb">
+              Software Engineering&nbsp; <span className="name">@</span>{" "}
+              McMaster
+            </div> */}
+          {/* </div> */}
         </div>
       </div>
-      <span className="lower-menu">
+      {/* <span className="lower-menu">
         <div className="menu-button-wrapper">
           <a href={Resume} type="application/pdf" target="_blank">
             <button className="menu-button">Resume</button>
@@ -246,7 +251,7 @@ function App() {
             Software Engineering&nbsp; <span className="name">@</span> McMaster
           </div>
         </div>
-      </span>
+      </span> */}
       <div id="about">
         <div className="about-title">
           ABOUT
