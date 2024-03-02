@@ -79,30 +79,30 @@
     left: -15%;
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover>.linkedin-logo {
+#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.linkedin-logo {
     scale: 1;
-    transform: rotate(-45deg) scaleX(-1) scaleY(-1);
-    top: -2em;
-    left: -3em;
+    transform: rotate(45deg) ;
+    top: 80%;
+    left: -15%;
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover~.coffee-logo {
+#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.coffee-logo {
     scale: 1;
-    transform: rotate(0) scaleX(-1) scaleY(-1);
-    top: -3.5em;
+    transform: rotate(0);
+    top: 110%
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover~.teams-logo {
+#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.teams-logo {
     scale: 1;
-    transform: rotate(0) scaleX(-1) scaleY(-1);
-    top: -3.5em;
+    transform: rotate(0);
+    top: 110%;
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover~.gmail-logo {
+#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.gmail-logo {
     scale: 1;
-    transform: rotate(45deg) scaleX(-1) scaleY(-1);
-    top: -2em;
-    left: 55%;
+    transform: rotate(-45deg);
+    top: 80%;
+    left: 102%;
 }
 
 /* My Photo */
