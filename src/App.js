@@ -37,9 +37,9 @@ import Project from "./Componenets/Project";
 import Experience from "./Componenets/Experience";
 
 function App() {
-  const [LocalLovePop, setLovalLovePop] = useState(false);
-  const [coopButtonClicked, setCoopButton] = useState(false);
-  const [clubButtonClicked, setClubButton] = useState(false);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
   const ScotiabankExperience = document.getElementById("Scotiabank");
   const OntarioHealthExperience = document.getElementById("OntarioHealth");
@@ -152,6 +152,32 @@ function App() {
     allBtn.style.backgroundColor = "#7848c4";
     coopBtn.style.backgroundColor = "#916FFF";
     clubBtn.style.backgroundColor = "#7848c4";
+  };
+
+  const onSubmit = async (event) => {
+    setEmail('')
+    setMessage('')
+    setName('')
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "f71b698f-2fa5-46ba-8b8c-8a3b0e025259");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+    }
   };
 
   return (
@@ -384,11 +410,32 @@ function App() {
           Lets connect<span className="name">,&nbsp;</span> I would love to have
           a coffee chat<span className="name">!</span>{" "}
         </div>
-        <textarea className="contact-message"></textarea>
+        <form onSubmit={onSubmit}>
+            <div className="contact-your-info-wrap">
+                <input
+                    className="contact-your-info"
+                    type="text" placeholder="Your Name"
+                    value = {name}
+                    onChange={(e) => setName(e.target.value)}
+                ></input>
+                <input
+                    className="contact-your-info"
+                    type="email" placeholder="Your Email"
+                    value = {email}
+                    onChange={(e) => setEmail(e.target.value)}
+                ></input>
+            </div>
+            <textarea
+                name = "message"
+                className="contact-message"
+                placeholder="Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}></textarea>
 
-        <div className="contact-button-container">
-          <button className="contact-button">Send</button>
-        </div>
+            <div className="contact-button-container">
+            <button type="submit" className="contact-button">Send</button>
+            </div>
+        </form>
       </div>
     </div>
   );

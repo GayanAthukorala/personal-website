@@ -459,20 +459,49 @@ html {
 
 .contact-blurb {
     margin-left: 3rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
     white-space: nowrap;
     overflow: hidden;
     height: clamp(3rem, 8vh, 6rem);
-    width: clamp(10rem, 40vw, 40rem);
+    width: 40%;
     border-radius: 0.5em;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(40, 40, 40);
     color: rgb(240, 240, 240);
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
+}
+
+.contact-your-info-wrap {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-your-info {
+    border: none;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 25%;
+    width: 40%;
+    border-radius: 0.5em;
+    background-color: rgb(40, 40, 40);
+    color: rgb(240, 240, 240);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
+    padding: 1.5rem;
+    outline: none;
 }
 
 .contact-message {
@@ -486,7 +515,7 @@ html {
     height: 40vh;
     width: 90vw;
     border-radius: 0.5em;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(40, 40, 40);
     color: rgb(240, 240, 240);
     text-align: center;
     display: flex;
