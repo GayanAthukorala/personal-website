@@ -302,7 +302,7 @@ function App() {
             ideas into a reality.
           </div>
           <div className="about-paragraph">
-            Currently, I'm working as a Software Developer Intern at IBM, but I have
+            Currently, I'm working part-time as a Software Developer Intern at IBM, but I have
             experience in Cloud, AI, and Full-Stack Development through previous
             internships, my education, and projects. Outside of work I love
             spending time with my friends, playing volleyball, and going skiing!{" "}
