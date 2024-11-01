@@ -187,7 +187,7 @@ html {
 .menu-item {
     color: rgb(220, 220, 220);
     font-size: 8vw;
-    font-family: Geneva;
+    font-family: Geneva, Tahoma, sans-serif;
     font-weight: bolder;
     text-decoration: none;
     display: block;
@@ -200,7 +200,7 @@ html {
 .menu-item-2 {
     color: rgb(240, 240, 240);
     font-size: 8vw;
-    font-family: Geneva;
+    font-family: Geneva, Tahoma, sans-serif;
     font-weight: 800;
     text-decoration: none;
     display: block;
