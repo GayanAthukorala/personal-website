@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import gayanPhoto from "./images/DarkerPic.png";
-import McMaster from "./images/McMaster Logo.jpg";
-import Soti from "./images/Soti Logo.jpg";
+import McMaster from "./images/McMasterLogo.png";
+import IBM from "./images/IBM Logo.webp";
 import Rocketry from "./images/McMaster Rocketry Logo.jpg";
 import TechM from "./images/Tech Mahindra Logo.jpg";
 import JS from "./images/JavaScript Logo.png";
@@ -51,6 +51,7 @@ function App() {
   const coopBtn = document.getElementById("coopBtn");
 
   const allButtonClick = () => {
+    const IBMExperience = document.getElementById("IBM")
     const ScotiabankExperience = document.getElementById("Scotiabank");
     const OntarioHealthExperience = document.getElementById("OntarioHealth");
     const DeltaHacksExperience = document.getElementById("DeltaHacks");
@@ -59,6 +60,9 @@ function App() {
     const allBtn = document.getElementById("allBtn");
     const clubBtn = document.getElementById("clubBtn");
     const coopBtn = document.getElementById("coopBtn");
+
+    IBMExperience.style.display = "flex";
+
     ScotiabankExperience.style.display = "flex";
 
     TechMahindraExperience.style.display = "flex";
@@ -82,6 +86,7 @@ function App() {
   };
 
   const clubButtonClick = () => {
+    const IBMExperience = document.getElementById("IBM")
     const ScotiabankExperience = document.getElementById("Scotiabank");
     const OntarioHealthExperience = document.getElementById("OntarioHealth");
     const DeltaHacksExperience = document.getElementById("DeltaHacks");
@@ -91,6 +96,9 @@ function App() {
     const clubBtn = document.getElementById("clubBtn");
     const coopBtn = document.getElementById("coopBtn");
     // setExperienceToggle(0);
+
+    IBMExperience.style.display = "none";
+
     ScotiabankExperience.style.display = "none";
 
     TechMahindraExperience.style.display = "none";
@@ -113,6 +121,7 @@ function App() {
   };
 
   const coopButtonClick = () => {
+    const IBMExperience = document.getElementById("IBM")
     const ScotiabankExperience = document.getElementById("Scotiabank");
     const OntarioHealthExperience = document.getElementById("OntarioHealth");
     const DeltaHacksExperience = document.getElementById("DeltaHacks");
@@ -127,6 +136,8 @@ function App() {
     TechMahindraExperience.style.display = "flex";
 
     OntarioHealthExperience.style.display = "flex";
+
+    IBMExperience.style.display = "flex";
 
     DeltaHacksExperience.style.display = "none";
 
@@ -169,10 +180,10 @@ function App() {
             <div className="row">
               <a href="#about" className="menu-item">
                 ABOUT
-                <img className="mcmaster-logo" src={McMaster} />
-                <img className="techm-logo" src={DeltaHacks} />
-                <img className="soti-logo" src={OntarioHealth} />
-                <img className="rocketry-logo" src={Scotiabank} />
+                <img className="company1-logo" src={McMaster} />
+                <img className="company2-logo" src={DeltaHacks} />
+                <img className="company3-logo" src={Scotiabank} />
+                <img className="company4-logo" src={IBM} />
               </a>
 
               <div className="bar-wrapper">
@@ -265,8 +276,8 @@ function App() {
             ideas into a reality.
           </div>
           <div className="about-paragraph">
-            Currently, I'm working in Cloud Security at Scotiabank, but I have
-            experience in Cloud, AI, QA, and development through previous
+            Currently, I'm working as a Software Developer Intern at IBM, but I have
+            experience in Cloud, AI, and Full-Stack Development through previous
             internships, my education, and projects. Outside of work I love
             spending time with my friends, playing volleyball, and going skiing!{" "}
           </div>
@@ -286,10 +297,16 @@ function App() {
           </div>
           <div className="about-experience-wrapper">
             <Experience
+                id="IBM"
+                picture={IBM}
+                company="IBM"
+                role="Software Developer Intern "
+            />
+            <Experience
               id="Scotiabank"
               picture={Scotiabank}
               company="Scotiabank"
-              role="Cloud Security Engineer
+              role="Software Engineer
                     Intern "
             />
 
@@ -303,7 +320,7 @@ function App() {
               id="DeltaHacks"
               picture={DeltaHacks}
               company="DeltaHacks"
-              role="Logistics Executive "
+              role="VP Sponsorship "
             />
 
             <Experience

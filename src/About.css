@@ -1,104 +1,103 @@
 /* About */
-#menu-items:hover>.row>.menu-item:hover>.mcmaster-logo {
+#menu-items:hover > .row > .menu-item:hover > .company1-logo {
     scale: 1;
     transform: rotate(-45deg);
     top: -30%;
-    left: -15%
+    left: -15%;
 }
 
-#menu-items:hover>.row>.menu-item:hover>.techm-logo {
+#menu-items:hover > .row > .menu-item:hover > .company2-logo {
     scale: 1;
     transform: rotate(45deg);
     top: -30%;
     left: 100%;
 }
 
-#menu-items:hover>.row>.menu-item:hover>.soti-logo {
+#menu-items:hover > .row > .menu-item:hover > .company3-logo {
     scale: 1;
     transform: rotate(0deg);
     top: -50%;
 }
 
-#menu-items:hover>.row>.menu-item:hover>.rocketry-logo {
+#menu-items:hover > .row > .menu-item:hover > .company4-logo {
     scale: 1;
     transform: rotate(0deg);
     top: -50%;
 }
 
 /* Projects */
-#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2 > .node-logo {
+#menu-items:hover > .swapY > .row > .swapY:hover > .menu-item-2 > .node-logo {
     scale: 1;
     transform: rotate(-45deg);
     top: 95%;
     left: 100%;
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.sql-logo {
+#menu-items:hover > .swapY > .row > .swapY:hover > .menu-item-2 > .sql-logo {
     scale: 1;
     transform: rotate(0);
     top: 115%;
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.java-logo {
+#menu-items:hover > .swapY > .row > .swapY:hover > .menu-item-2 > .java-logo {
     scale: 1;
-    transform: rotate(0) ;
+    transform: rotate(0);
     top: 115%;
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.css-logo {
+#menu-items:hover > .swapY > .row > .swapY:hover > .menu-item-2 > .css-logo {
     scale: 1;
     transform: rotate(-135deg);
     top: 100%;
     left: -15%;
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.js-logo {
+#menu-items:hover > .swapY > .row > .swapY:hover > .menu-item-2 > .js-logo {
     scale: 1;
     transform: rotate(45deg);
     top: -30%;
-        left: 100%;
+    left: 100%;
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.python-logo {
+#menu-items:hover > .swapY > .row > .swapY:hover > .menu-item-2 > .python-logo {
     scale: 1;
     transform: rotate(0);
     top: -50%;
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.react-logo {
+#menu-items:hover > .swapY > .row > .swapY:hover > .menu-item-2 > .react-logo {
     scale: 1;
     transform: rotate(0);
     top: -50%;
-
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.html-logo {
+#menu-items:hover > .swapY > .row > .swapY:hover > .menu-item-2 > .html-logo {
     scale: 1;
     transform: rotate(-45deg);
     top: -30%;
     left: -15%;
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.linkedin-logo {
+#menu-items:hover > .swapY > .row > .swapY:hover > .menu-item-2 > .linkedin-logo {
     scale: 1;
-    transform: rotate(45deg) ;
+    transform: rotate(45deg);
     top: 80%;
     left: -15%;
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.coffee-logo {
-    scale: 1;
-    transform: rotate(0);
-    top: 110%
-}
-
-#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.teams-logo {
+#menu-items:hover > .swapY > .row > .swapY:hover > .menu-item-2 > .coffee-logo {
     scale: 1;
     transform: rotate(0);
     top: 110%;
 }
 
-#menu-items:hover>.swapY>.row>.swapY:hover>.menu-item-2>.gmail-logo {
+#menu-items:hover > .swapY > .row > .swapY:hover > .menu-item-2 > .teams-logo {
+    scale: 1;
+    transform: rotate(0);
+    top: 110%;
+}
+
+#menu-items:hover > .swapY > .row > .swapY:hover > .menu-item-2 > .gmail-logo {
     scale: 1;
     transform: rotate(-45deg);
     top: 80%;
@@ -134,7 +133,6 @@
     max-width: 80%;
     max-height: 80%;
     /* position: absolute; */
-
 }
 
 .lower-menu {
@@ -168,8 +166,8 @@
 }
 
 .menu-button:hover {
-    background-color: #916FFF;
-    border: solid #916FFF;
+    background-color: #916fff;
+    border: solid #916fff;
 }
 
 .blurb-wrapper {
@@ -194,12 +192,10 @@
     font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
 }
 
-
 /* ABOUT */
 
 #about {
     /* height: 100vh; */
-
 }
 
 .about-heading {
@@ -233,7 +229,8 @@
     padding-bottom: 1.5rem;
     font-size: clamp(3rem, 4vw, 8rem);
     color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
 }
 
 .about-info {
@@ -286,7 +283,7 @@
     height: 2.5rem;
     width: 17rem;
     clip-path: polygon(0 0, 94.5% 0, 100% 100%, 5.5% 100%);
-    background-color: #916FFF;
+    background-color: #916fff;
     border: none;
     border-bottom-right-radius: 0.25rem;
     border-top-right-radius: 0.5rem;
@@ -295,7 +292,6 @@
     font-size: 0.75rem;
     font-weight: bold;
     transition: 0.5s;
-
 }
 
 .all-btn:hover {
@@ -303,7 +299,6 @@
 }
 
 .coop-btn {
-
     height: 2.5rem;
     width: 12rem;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
@@ -323,7 +318,6 @@
     cursor: pointer;
 }
 
-
 .about-experience-wrapper {
     margin-top: 2rem;
     width: 80vw;
@@ -336,8 +330,6 @@
     /* Center the grid items horizontally */
     align-items: stretch;
     /* Stretch grid items to match the height */
-
-
 }
 
 .about-experience-grid-item {
@@ -346,7 +338,6 @@
     justify-content: center;
     animation: fadeIn 0.3s ease-in-out;
     transform: 0.3s;
-
 }
 
 .about-experience {
@@ -378,9 +369,7 @@
 .about-experience-image {
     height: 5rem;
     border-radius: 0.5rem;
-
 }
-
 
 .about-experience-title-frame {
     height: clamp(5rem, 20vh, 9rem);
